@@ -19,6 +19,7 @@ roles:
   page-bg:               papyrus
   surface:               sage
   surface-alt:           sage
+  block-bg:              papyrus
   outline:               slate-blue
   detail:                slate-grey
   text:                  mahogany

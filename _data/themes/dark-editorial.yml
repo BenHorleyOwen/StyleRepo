@@ -18,12 +18,14 @@ palette:
   sky:            "#a0c8ff"
   lavender-faint: "rgba(178,171,202,0.2)"
   lavender-soft:  "rgba(178,171,202,0.4)"
+  lavender-wash:  "rgba(178,171,202,0.08)"
   clear:          "transparent"
 
 roles:
   page-bg:               ink
   surface:               panel
   surface-alt:           panel-alt
+  block-bg:              lavender-wash
   outline:               line
   detail:                line
   text:                  lavender
