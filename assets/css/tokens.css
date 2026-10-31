@@ -1,0 +1,18 @@
+---
+---
+{%- assign theme = site.data.themes[site.style_theme] -%}
+/* Theme: {{ theme.name }} (generated from _data/themes/{{ site.style_theme }}.yml) */
+:root {
+{%- for c in theme.palette %}
+  --palette-{{ c[0] }}: {{ c[1] }};
+{%- endfor %}
+{%- for r in theme.roles %}
+  --color-{{ r[0] }}: var(--palette-{{ r[1] }});
+{%- endfor %}
+{%- for f in theme.fonts %}
+  --{{ f[0] }}: {{ f[1] }};
+{%- endfor %}
+{%- for s in theme.shape %}
+  --{{ s[0] }}: {{ s[1] }};
+{%- endfor %}
+}

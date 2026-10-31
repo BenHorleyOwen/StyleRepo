@@ -1,0 +1,46 @@
+# Theme: matchbox
+# Palette taken from a matchbox. Every theme must define the same roles.
+
+name: matchbox
+
+palette:
+  slate-blue: "#717c98"
+  slate-grey: "#7d8d9d"
+  silver:     "#bcbdb7"
+  sage:       "#c0c1a1"
+  papyrus:    "#d9cfb6"
+  mahogany:   "#341b1e"
+  # Derived, not from the matchbox. Needed for readable dim text and links on papyrus.
+  # To drop them, point the roles that use them at mahogany instead.
+  mahogany-soft: "#5c4043"
+  slate-deep:    "#3f4a68"
+
+roles:
+  page-bg:               papyrus
+  surface:               sage
+  surface-alt:           sage
+  outline:               slate-blue
+  detail:                slate-grey
+  text:                  mahogany
+  text-dim:              mahogany-soft
+  text-muted:            mahogany-soft
+  accent:                mahogany
+  link:                  slate-deep
+  title-bg:              slate-blue
+  title-text:            silver
+  nav-bg:                slate-blue
+  nav-text:              mahogany
+  nav-text-hover:        mahogany
+  nav-hover-bg:          slate-grey
+  scrollbar-thumb:       mahogany
+  scrollbar-thumb-hover: mahogany-soft
+  scrollbar-track:       sage
+
+fonts:
+  font-display: "'Syne', sans-serif"
+  font-body:    "'Lora', serif"
+  font-mono:    "'Space Mono', monospace"
+
+shape:
+  radius: 3px
+  title-pad: 0.35em 0.75em

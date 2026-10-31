@@ -1,0 +1,51 @@
+# Theme: dark-editorial
+# Captured from the original main.css. Loading this theme should look the same as before.
+# palette = raw colours. roles = what each colour is for (roles point at palette names).
+# Every theme must define the same roles, because the site CSS only refers to roles.
+
+name: dark-editorial
+
+palette:
+  ink:            "#0a0a0f"
+  ink-glass:      "rgba(10,10,15,0.85)"
+  panel:          "#111118"
+  panel-alt:      "#18181f"
+  line:           "#2a2a35"
+  lavender:       "#B2ABCA"
+  dim:            "#666680"
+  muted:          "#3a3a50"
+  lime:           "#e8f060"
+  sky:            "#a0c8ff"
+  lavender-faint: "rgba(178,171,202,0.2)"
+  lavender-soft:  "rgba(178,171,202,0.4)"
+  clear:          "transparent"
+
+roles:
+  page-bg:               ink
+  surface:               panel
+  surface-alt:           panel-alt
+  outline:               line
+  detail:                line
+  text:                  lavender
+  text-dim:              dim
+  text-muted:            muted
+  accent:                lime
+  link:                  sky
+  title-bg:              clear
+  title-text:            lavender
+  nav-bg:                ink-glass
+  nav-text:              dim
+  nav-text-hover:        lavender
+  nav-hover-bg:          clear
+  scrollbar-thumb:       lavender-faint
+  scrollbar-thumb-hover: lavender-soft
+  scrollbar-track:       clear
+
+fonts:
+  font-display: "'Syne', sans-serif"
+  font-body:    "'Lora', serif"
+  font-mono:    "'Space Mono', monospace"
+
+shape:
+  radius: 0
+  title-pad: 0

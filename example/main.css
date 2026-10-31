@@ -1,0 +1,87 @@
+/* Reference main.css. Uses only variables from tokens.css, no raw colours.
+   Lift whichever rules you need into your site's own main.css. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Scrollbar: mahogany handle on a sage track */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+}
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: var(--color-scrollbar-track); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border: 3px solid var(--color-scrollbar-track);
+  border-radius: var(--radius);
+}
+
+body {
+  margin: 0;
+  background: var(--color-page-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  line-height: var(--line-height);
+}
+
+main { max-width: var(--measure); margin: 0 auto; padding: var(--space-xl) var(--space-md); }
+
+a { color: var(--color-text); text-decoration-color: var(--color-outline); text-decoration-thickness: 2px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--color-accent); }
+:focus-visible { outline: var(--border-width) solid var(--color-accent); outline-offset: 2px; }
+
+/* Titles: bold silver text on a slate-blue box */
+h1, .title-box {
+  display: block;
+  margin: 0 0 var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-title-bg);
+  color: var(--color-title-text);
+  font-family: var(--font-heading);
+  font-size: var(--size-title);
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: var(--radius);
+}
+h2, h3 { font-family: var(--font-heading); line-height: 1.25; margin: var(--space-xl) 0 var(--space-sm); }
+
+/* Navigation: blues only */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-nav-bg);
+  border-bottom: var(--border-width) solid var(--color-outline);
+}
+.site-nav a {
+  padding: var(--space-xs) var(--space-md);
+  color: var(--color-nav-text);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+.site-nav a:hover,
+.site-nav a[aria-current="page"] { background: var(--color-nav-hover-bg); }
+.site-nav a[aria-current="page"] { box-shadow: inset 0 calc(var(--border-width) * -1) 0 var(--color-accent); }
+
+/* Surfaces */
+.card {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-outline);
+  border-radius: var(--radius);
+}
+hr { border: 0; border-top: var(--border-width) solid var(--color-detail); margin: var(--space-xl) 0; }
+code { background: var(--color-surface); padding: 0.1em 0.35em; border-radius: var(--radius); font-size: 0.9em; }
+
+/* Style guide page only */
+.swatches { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-md); grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); }
+.swatch { background: var(--color-surface); border: var(--border-width) solid var(--color-outline); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.swatch__chip { display: block; height: 4.5rem; border-bottom: var(--border-width) solid var(--color-outline); }
+.swatch__label { padding: var(--space-sm) var(--space-md); display: flex; flex-direction: column; }
+.roles { width: 100%; border-collapse: collapse; }
+.roles th, .roles td { text-align: left; padding: var(--space-sm); border-bottom: 1px solid var(--color-detail); vertical-align: middle; }
+.roles .swatch__chip { width: 2.5rem; height: 1.5rem; border: var(--border-width) solid var(--color-outline); border-radius: var(--radius); }
+.scroll-demo { max-height: 9rem; overflow-y: auto; }
